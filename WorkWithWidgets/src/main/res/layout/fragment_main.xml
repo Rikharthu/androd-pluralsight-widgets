@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Change Widget"
+      android:id="@+id/btnChangeWidget"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentRight="true"/>
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Start Alarm Manager"
+      android:id="@+id/btnStartAlarmManager"
+      android:layout_below="@+id/btnChangeWidget"
+      android:layout_alignParentLeft="true"
+      android:layout_marginTop="59dp"
+      android:layout_alignRight="@+id/btnChangeWidget"/>
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Stop Alarm Manager"
+      android:id="@+id/btnStopAlarmManager"
+      android:layout_below="@+id/btnStartAlarmManager"
+      android:layout_alignParentLeft="true"
+      android:layout_alignRight="@+id/btnStartAlarmManager"/>
+</RelativeLayout>

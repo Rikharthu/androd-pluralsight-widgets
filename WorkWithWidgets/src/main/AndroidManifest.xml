@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.pluralsight.workwithwidgets"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="18"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.pluralsight.workwithwidgets.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.pluralsight.workwithwidgets.ShowImageActivity"
+            android:label="@string/title_activity_show_image"
+            android:parentActivityName="com.pluralsight.workwithwidgets.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pluralsight.workwithwidgets.MainActivity"/>
+        </activity>
+
+        <receiver
+            android:name=".AKittyWidget"
+            android:label="A Kitty Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.pluralsight.action.EXPLICIT_UPDATE"/>
+            </intent-filter>
+            <!-- associate information with the widget provider in the manifest -->
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/a_kitty_widget_provider_info"/>
+        </receiver>
+
+        <!--widget configuration activity -->
+        <activity
+            android:name="com.pluralsight.workwithwidgets.AKittyWidgetConfigActivity"
+            android:label="A Kitty Widget Config">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONIFURE"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

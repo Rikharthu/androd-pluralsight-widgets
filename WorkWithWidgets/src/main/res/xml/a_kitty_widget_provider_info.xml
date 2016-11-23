@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Android gets information about our widget from here-->
+<appwidget-provider
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configure="com.pluralsight.workwithwidgets.AKittyWidgetConfigActivity"
+    android:initialLayout="@layout/a_simple_kitty_widget"
+    android:minHeight="110dp"
+    android:minWidth="180dp"
+    android:previewImage="@drawable/fwankwin_in_a_box_64x64"
+    android:updatePeriodMillis="1800000"
+>
+
+</appwidget-provider>
